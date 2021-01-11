@@ -25,4 +25,6 @@ sudo apt-get update
 sudo apt-get -y install jenkins openjdk-11-jdk
 exec bash
 sudo systemctl start jenkins
+sudo usermod -aG docker jenkins
 
+sudo reboot
