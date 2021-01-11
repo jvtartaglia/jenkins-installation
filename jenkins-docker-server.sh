@@ -19,11 +19,11 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 
 # Jenkins installation
+sudo apt-get -y openjdk-11-jdk
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
-sudo apt-get -y install jenkins openjdk-11-jdk
-exec bash
+sudo apt-get install -y jenkins
 sudo systemctl start jenkins
 sudo usermod -aG docker jenkins
 
