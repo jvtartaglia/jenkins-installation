@@ -6,7 +6,7 @@ sudo apt update && sudo apt -y upgrade
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
-exec bash
+su - $USER
 
 # Java installation
 sudo apt -y install openjdk-11-jdk
